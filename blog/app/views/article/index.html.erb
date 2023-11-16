@@ -1,0 +1,37 @@
+<!--  MOVED TO CONTROLLER-->
+<!-- <% post1="Learning Ruby on Rails" %>
+<% post2="Kind of Programming Languages" %>
+
+<% 
+    languages = ['rust','ruby', 'c']
+%> -->
+<!-- end MOVED TO CONTROLLER-->
+
+<div class="main posts-index">
+    <div class="container">
+        <%= flash[:msg] %>
+        <a href="/article/input">Input Article</a>
+        <table border="1" cellspacing="0" cellpadding="5">
+            <thead>
+                <th>No</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Action</th>
+            </thead>
+            <tbody>
+                <% @articles.each_with_index do | value, index | %>
+                    <tr>
+                        <td><%= index+1 %> </td>
+                        <td><%= value.title %></td>
+                        <td><%= value.description %></td>
+                        <td>
+                            <a href="/article/detail/<%= value.id %>">detail</a> |
+                            <a href="/article/edit/<%= value.id %>">edit</a> |
+                            <a href="/article/delete/<%= value.id %>" onclick="return confirm('are you sure delete &quot;<%= value.title %>?&quot; ')">delete</a>
+                        </td>
+                    </tr>
+                <% end %>
+            </tbody>
+        </table>
+    </div>
+</div>

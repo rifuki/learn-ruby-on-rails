@@ -1,0 +1,20 @@
+<div class="main posts-new">
+    <div class="container">
+        <h1>Edit Data</h1>
+        <form action="/article/update/<%= @article.id %>" class="form" method="put">
+            <div class="form-body">
+                <!-- <input type="hidden" name="id" value="<%= @article.id %>" required> -->
+
+                <label>title</label>
+                <input name="title" value="<%= @article.title %>" required>
+
+                <label>Description</label>
+                <textarea name="description"><%= @article.description %></textarea>
+
+                <button type="submit">submit</button>
+
+                <a href="/article">back</a>
+            </div>
+        </form>
+    </div>
+</div>

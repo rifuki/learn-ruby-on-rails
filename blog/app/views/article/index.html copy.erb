@@ -1,0 +1,29 @@
+<!--  MOVED TO CONTROLLER-->
+<!-- <% post1="Learning Ruby on Rails" %>
+<% post2="Kind of Programming Languages" %>
+
+<% 
+    languages = ['rust','ruby', 'c']
+%> -->
+<!-- end MOVED TO CONTROLLER-->
+
+<div class="main posts-index">
+    <div class="container">
+        <div class="posts-index-item" style="text-align: center;">
+            <%= post1 %> <br>
+        </div>
+        <div class="posts-index-item" style="text-align: center;">
+            <%= post2 %> <br>
+        </div>
+
+        <br>
+
+        <span style="text-transform: capitalize;">my programming languages</span>
+        <% languages.each_with_index do |lang, index| %>
+            <div class="posts-index-item">
+                <span style="text-transform: capitalize;"><%= index+1 %>. <%= lang %></span> <br>
+            </div>
+        <% end %>
+
+    </div>
+</div>
